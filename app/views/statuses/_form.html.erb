@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <%= f.input :user_id, collection: User.all(order: 'first_name'), label_method: :full_name, selected: User.where(:user_id)  %>
+  <%= f.input :user_id, collection: User.all, label_method: :full_name, selected: current_user  %>
   <%= f.input :content %>
   <div class="form-actions">
     <%= f.button :submit %>
