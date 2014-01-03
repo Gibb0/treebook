@@ -12,21 +12,21 @@
 			<div class="container">
 
 				<% if user_signed_in? %>
-					<%= link_to "Treebook", statuses_path, class: 'brand' %>
+					<%= link_to "Treebook", feed_path, class: 'brand' %>
 				<% else %>
-					<%= link_to "Treebook", new_user_registration_path, class: 'brand' %>
+					<%= link_to "Treebook", register_path, class: 'brand' %>
 				<% end %>
 
 				<ul class="nav">
-					<li><%= link_to "All statuses", statuses_path %></li>
+					<li><%= link_to "All statuses", feed_path %></li>
 				</ul>
 				<ul class="nav pull-right">
 					<% if user_signed_in? %>
-						<li><%= link_to current_user.full_name, edit_user_registration_path %></li>
-						<li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+						<li><%= link_to current_user.full_name, edit_path %></li>
+						<li><%= link_to "Log Out", logout_path %></li>
 					<% else %>
-						<li><%= link_to "Register", new_user_registration_path %></li>
-						<li><%= link_to "Log in", new_user_session_path %></li>
+						<li><%= link_to "Register", register_path %></li>
+						<li><%= link_to "Log in", login_path %></li>
 					<% end %>
 				<ul>
 			</div>
