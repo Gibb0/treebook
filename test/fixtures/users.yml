@@ -3,3 +3,9 @@ dan:
     last_name: "Gib"
     email: "dangib@live.com"
     profile_name: "dangib"
+
+jim: 
+    first_name: "jim"
+    last_name: "hoskins"
+    email: "jimh@live.com"
+    profile_name: "jimh"

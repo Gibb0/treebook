@@ -21,4 +21,9 @@ class CustomRoutesTest < ActionDispatch::IntegrationTest
 		get '/edit'
 		assert_response :redirect
 	end
+
+	test "thata profile page works" do
+		get '/dangib'
+		assert_response :success
+	end
 end
